@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding: 0;
+    background-size:cover;
+    box-sizing: border-box;
+}
+/* initial styles - adaptive columns */
+.masonry{
+    max-width: 1200px;
+    display: flex;
+    background-color: pink;
+    flex-wrap: wrap;
+}
+.masonry__item{
+    height: fit-content;
+    list-style-type: none;
+
+}
+.masonry__image{
+    width: 200px;
+    height: auto;
+    padding: 3px;
+}
