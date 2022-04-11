@@ -5,20 +5,25 @@ function building(masonry,columnWidth){
         for(let i = 0; i < columnsQuantity; i++){
             let columnDiv = document.createElement('div')
             columnDiv.className = 'columnDiv'
-            columnDiv.style.height = "fit content"
             masonry[0].prepend(columnDiv)
+            columnDiv.style.top = `5px`
+            columnDiv.style.left = `${i*columnWidth}px`
             console.log(document.getElementsByClassName('columnDiv')[0], "nthColumnDiv")
-            // columnDiv.prepend(imagesArr[i])
+            columnDiv.append(imagesArr[i])
         }
         let columnsArr = Array.from(document.getElementsByClassName('columnDiv'))
-        console.log(columnsArr)
-        // let j=0   
-            for(let j=0;j<imagesArr.length;j++){
-                for(let i=0;i<columnsArr.length;i++){
-                    columnsArr[i].prepend(imagesArr[j])
-                }
-                j=j+columnsQuantity
-            }
+        let columnsHeight=[]
+        setTimeout(()=>{
+            for(let i=4;i<imagesArr.length;i++){
+                columnsHeight = columnsArr.map((column) =>{
+                    return (column.offsetHeight)
+                })
+               currentColumn = columnsArr.find((element) => element.offsetHeight===Math.min(...columnsHeight))       
+                  console.log(currentColumn)
+                     currentColumn.append(imagesArr[i])
+             }
+            console.log(columnsHeight ,"heights of columns")
+        },1000)
 }
 building(masonry,200)
 

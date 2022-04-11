@@ -3,21 +3,26 @@
     padding: 0;
     background-size:cover;
     box-sizing: border-box;
+    max-width: 1200px;
 }
 /* initial styles - adaptive columns */
 .masonry{
-    max-width: 1200px;
-    display: flex;
     background-color: pink;
-    flex-wrap: wrap;
+    position:relative;
 }
 .masonry__item{
+    display: inline-block;
     height: fit-content;
     list-style-type: none;
-
 }
 .masonry__image{
-    width: 200px;
     height: auto;
     padding: 3px;
+    width: 200px;
+}
+.columnDiv{
+    width: 200px;
+    display: inline;
+    position:absolute;
+    height:fit-content;
 }
