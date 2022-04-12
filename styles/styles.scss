@@ -1,6 +1,6 @@
 *{
     margin:0;
-    padding: 0;
+    padding:0;
     background-size:cover;
     box-sizing: border-box;
     max-width: 1200px;
@@ -9,19 +9,22 @@
 .masonry{
     background-color: pink;
     position:relative;
+    height: fit-content;
+
 }
 .masonry__item{
     display: inline-block;
-    height: fit-content;
     list-style-type: none;
+    width: inherit;
+
 }
 .masonry__image{
     height: auto;
-    padding: 3px;
-    width: 200px;
+    padding: 2px;
+    width:inherit;
 }
 .columnDiv{
-    width: 200px;
+    // width: 200px;
     display: inline;
     position:absolute;
     height:fit-content;
