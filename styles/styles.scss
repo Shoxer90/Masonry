@@ -1,28 +1,28 @@
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
-    background-size:cover;
+    font-size: 0;
+    background-size: cover;
     box-sizing: border-box;
     max-width: 1200px;
 }
-/* initial styles - adaptive columns */
 .masonry{
-    background-color: pink;
-    position:relative;
-}
-.masonry__item{
-    display: inline-block;
+    position: relative;
     height: fit-content;
-    list-style-type: none;
-}
-.masonry__image{
-    height: auto;
-    padding: 3px;
-    width: 200px;
+    &__item{
+        display: inline-block;
+        font-size: 0;
+        list-style-type: none;
+        width: inherit;
+        .masonry__image{
+            height: auto;
+            padding: 2px;
+            width: inherit;
+        }
+    }  
 }
 .columnDiv{
-    width: 200px;
     display: inline;
-    position:absolute;
-    height:fit-content;
+    position: absolute;
+    height: fit-content;
 }
