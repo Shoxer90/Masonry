@@ -37,7 +37,7 @@ class Masonry{
     }
 }
 let build = new Masonry('.masonry', {
-    columnWidth: 200,
+    columnWidth: 100,
     autoResize: true
 })
 build.render()
