@@ -1,15 +1,15 @@
 * {
   margin: 0;
   padding: 0;
+  font-size: 0;
+  background-color: #696992;
   background-size: cover;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 1200px;
 }
 
-/* initial styles - adaptive columns */
 .masonry {
-  background-color: pink;
   position: relative;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -18,13 +18,14 @@
 
 .masonry__item {
   display: inline-block;
+  font-size: 0;
   list-style-type: none;
   width: inherit;
 }
 
-.masonry__image {
+.masonry__item .masonry__image {
   height: auto;
-  padding: 2px;
+  padding: 2.5px;
   width: inherit;
 }
 
