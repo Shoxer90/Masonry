@@ -6,12 +6,9 @@ class Masonry{
     }
     divMaker(){
         let columnsArr =[]
-        let columnsQuantity = Math.floor(document.body?.clientWidth / this.columnWidth);
+        let columnsQuantity = Math.floor(
+            document.body.clientWidth <this.columnWidth?1: document.body.clientWidth/ this.columnWidth);
         let imagesArr = document.querySelectorAll('li')
-        if(columnsQuantity === columnsArr.length) return
-            for(let i=0;i< columnsArr.length;i++){
-                columnsArr[i]?.replaceWith(...columnsArr[i]?.childNodes)
-            }
         for(let i=0; i < columnsQuantity; i++){
             let columnDiv = document.createElement('div')
             columnDiv.className = 'columnDiv'
@@ -25,6 +22,13 @@ class Masonry{
             let currentColumn = columnsArr?.find((element) => element?.offsetHeight === Math.min(...columnsHeight))       
             currentColumn?.append(imagesArr[i])
         }
+        if(this.autoResize === true){
+            window.addEventListener('resize', () => {
+                for(let i=0;i< columnsArr.length;i++){
+                    columnsArr[i]?.replaceWith(...columnsArr[i]?.childNodes)
+                }
+            })
+        }
     }
     render(){
         window.addEventListener('load',() => {
@@ -33,11 +37,12 @@ class Masonry{
                 window.addEventListener('resize', this.divMaker.bind(this))
             }
         });
-        
     }
 }
-let build = new Masonry('.masonry', {
-    columnWidth: 100,
+
+let build = {}
+build.__proto__ = new Masonry('.masonry', {
+    columnWidth: 200,
     autoResize: true
 })
 build.render()
