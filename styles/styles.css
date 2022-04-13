@@ -2,36 +2,18 @@
   margin: 0;
   padding: 0;
   font-size: 0;
-  background-size: cover;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #b29463;
 }
 
 .masonry {
   position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
-.masonry__item {
-  display: inline-block;
-  font-size: 0;
-  list-style-type: none;
-  width: inherit;
-}
-
-.masonry__item .masonry__image {
-  height: auto;
-  padding: 2px;
-  width: inherit;
-}
-
-.columnDiv {
+.masonry img {
   display: inline;
-  position: absolute;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  padding: 3px 0 3px 3px;
+  height: auto;
 }
 /*# sourceMappingURL=styles.css.map */
