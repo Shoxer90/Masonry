@@ -56,7 +56,6 @@ let build3 = new Masonry('.m3', {
 });
 build3.render()
 
-let arr = [7,6,5,1445,21,152,0,6,4,2,1];
 function sortArray (arr) {
     var min = arr[0];
     for(var i = 0; i < arr.length - 1; i++) {
@@ -76,6 +75,3 @@ function sortArray (arr) {
     };
  return arr;
 };    
-
-console.log(sortArray(arr));
-
